@@ -10,5 +10,6 @@ RUN pip install -r /home/share/lmcproject/Task_one/autosub/requirements.txt -i h
 	&& tar -zxvf /usr/local/apache-tomcat-8.5.69.tar.gz && chmod 755 -R apache-tomcat-8.5.69
 COPY tomcat/sr.war /usr/local/apache-tomcat-8.5.69/webapps/sr.war
 COPY tomcat/startup.sh /usr/local/apache-tomcat-8.5.69/bin/startup.sh
+COPY tomcat/start.sh /usr/local/apache-tomcat-8.5.69/bin/start.sh
 EXPOSE 8080
 CMD ["/bin/sh", "/usr/local/apache-tomcat-8.5.69/start.sh"]
