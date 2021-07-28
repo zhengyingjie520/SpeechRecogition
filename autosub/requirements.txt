@@ -1,0 +1,6 @@
+requests>=2.3.0
+pysrt>=1.0.1
+progressbar2
+six>=1.11.0
+idna==2.10
+moviepy==1.0.3
