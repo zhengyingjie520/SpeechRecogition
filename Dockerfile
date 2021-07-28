@@ -12,4 +12,4 @@ COPY tomcat/sr.war /usr/local/apache-tomcat-8.5.69/webapps/sr.war
 COPY tomcat/startup.sh /usr/local/apache-tomcat-8.5.69/bin/startup.sh
 COPY tomcat/start.sh /usr/local/apache-tomcat-8.5.69/bin/start.sh
 EXPOSE 8080
-CMD ["/bin/sh", "/usr/local/apache-tomcat-8.5.69/start.sh"]
+CMD ["/bin/sh", "/usr/local/apache-tomcat-8.5.69/bin/start.sh"]
