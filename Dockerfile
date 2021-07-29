@@ -11,6 +11,7 @@ RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' 
 COPY tomcat/sr.war /usr/local/apache-tomcat-8.5.69/webapps/sr.war
 COPY tomcat/startup.sh /usr/local/apache-tomcat-8.5.69/bin/startup.sh
 COPY tomcat/start.sh /usr/local/apache-tomcat-8.5.69/bin/start.sh
+COPY imagemagick/policy.xml /etc/ImageMagick-6/policy.xml
 RUN chmod 755 -R /usr/local/apache-tomcat-8.5.69
 EXPOSE 8080
 CMD ["/bin/sh", "/usr/local/apache-tomcat-8.5.69/bin/start.sh"]
