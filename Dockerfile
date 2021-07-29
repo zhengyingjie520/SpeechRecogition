@@ -10,6 +10,7 @@ RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' 
 	&& tar -zxvf /usr/local/apache-tomcat-8.5.69.tar.gz
 COPY tomcat/startup.sh /usr/local/apache-tomcat-8.5.69/bin/startup.sh
 COPY tomcat/start.sh /usr/local/apache-tomcat-8.5.69/bin/start.sh
+COPY tomcat/java.security /etc/java-8-openjdk/security/java.security
 COPY imagemagick/policy.xml /etc/ImageMagick-6/policy.xml
 RUN chmod 755 -R /usr/local/apache-tomcat-8.5.69
 EXPOSE 8080
